@@ -1,0 +1,18 @@
+[
+    {
+        "number": 41795761085,
+        "username": "Jonathan",
+        "info": {
+            "password": "hashWithJs",
+            "birth_date": "05-05-1991",
+            "created_date": "11-12-2017",
+            "mail": "toto@gmail.com",
+            "profile_image_url": "http://ia.media-imdb.com/images/M/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX400_.jpg",
+            "description": "good mood",
+            "rank": 2,
+            "canton": "VD",
+            "address": "Chemin de la landes 15",
+            "npa":1234
+        }
+    }
+]
