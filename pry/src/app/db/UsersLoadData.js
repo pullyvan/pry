@@ -3,7 +3,7 @@ var fs = require('fs');
 
 AWS.config.update({
     region: "us-west-2",
-    endpoint: "http://localhost:8000"
+    endpoint: "https://dynamodb.us-west-2.amazonaws.com"
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();

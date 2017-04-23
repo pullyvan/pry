@@ -4,11 +4,6 @@ import { AuthService } from '../../providers/auth-service';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 
-
-
-console.log("Importing users into DynamoDB. Please wait.");
-
-
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -32,9 +27,9 @@ export class LoginPage {
         this.loading.dismiss();
         this.nav.setRoot(HomePage)
         });
-      } else {
+      } /*else {
         this.showError("Access Denied");
-      }
+      }*/
     },
     error => {
       this.showError(error);
