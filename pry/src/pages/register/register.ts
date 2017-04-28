@@ -1,10 +1,6 @@
-/// <reference types="aws-sdk" />
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, IonicPage } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
-import * as AWS from 'aws-sdk';
-
-
 
 @Component({
   selector: 'page-register',

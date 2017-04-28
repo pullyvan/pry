@@ -1,4 +1,3 @@
-/// <reference types="aws-sdk" /> 
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
