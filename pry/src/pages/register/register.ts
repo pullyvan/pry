@@ -1,6 +1,9 @@
+/// <reference types="aws-sdk" />
 import { Component } from '@angular/core';
-import { NavController, AlertController, IonicPage } from 'ionic-angular';
+import { NavController, NavParams, AlertController, IonicPage } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
+import * as AWS from 'aws-sdk';
+
 
 
 @Component({
@@ -10,8 +13,18 @@ import { AuthService } from '../../providers/auth-service';
 export class RegisterPage {
   createSuccess = false;
   registerCredentials = { email: '', password: '' };
+  //initialize user_credential
+  username:string;
+  user_password:string
+  user_email:string
 
-  constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController) { }
+  constructor(private nav: NavController, private NavParams: NavParams, private auth: AuthService, private alertCtrl: AlertController) {
+    this.username = NavParams.get('username');
+    this.user_email = NavParams.get('user_email');
+    this.user_password = NavParams.get('user_password');
+
+
+  }
 
   public register() {
     this.auth.register(this.registerCredentials).subscribe(success => {
