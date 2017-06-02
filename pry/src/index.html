@@ -16,49 +16,7 @@
   <script src="cordova.js"></script>
   <script src="/node_modules/aws-sdk/dist/aws-sdk.js"></script>
 
-  <script>
 
-  var AWS = require("aws-sdk");
-
-AWS.config.update({
-  region: "us-west-2",
-  endpoint: "http://localhost:8000"
-});
-
-var dynamodb = new AWS.DynamoDB();
-
-var params = {
-    TableName : "Movies",
-    KeySchema: [
-        { AttributeName: "year", KeyType: "HASH"},  //Partition key
-        { AttributeName: "title", KeyType: "RANGE" }  //Sort key
-    ],
-    AttributeDefinitions: [
-        { AttributeName: "year", AttributeType: "N" },
-        { AttributeName: "title", AttributeType: "S" }
-    ],
-    ProvisionedThroughput: {
-        ReadCapacityUnits: 10,
-        WriteCapacityUnits: 10
-    }
-};
-
-dynamodb.createTable(params, function(err, data) {
-    if (err) {
-        console.error("Unable to create table. Error JSON:", JSON.stringify(err, null, 2));
-    } else {
-        console.log("Created table. Table description JSON:", JSON.stringify(data, null, 2));
-    }
-});
-
-  </script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
-        .catch(err => console.log('Error', err));
-    }
-  </script>-->
 
   <link href="build/main.css" rel="stylesheet">
 
